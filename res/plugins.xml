@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugins path="../bin/plugins">
+	<plugin id="001" name="PluginA" visible="1"/>
+	<plugin id="002" name="PluginB" visible="0"/>
+	<plugin id="003" name="PluginC" visible="1"/>
+</plugins>
