@@ -7,9 +7,12 @@ CONFIG -= debug_and_release
 
 contains(TEMPLATE,lib){
     contains(CONFIG,plugin){
-        DLLDESTDIR = ../../bin/plugins/
+        unix:DESTDIR=../../bin/plugins/
+        win32{
+            DLLDESTDIR = ../../bin/plugins/
+            DESTDIR = ../../lib
+        }
     }
-    DESTDIR = ../../lib
 }else{
     DESTDIR = ../../bin
 }
