@@ -4,9 +4,9 @@
 #include <fstream>
 #include "TinyXml2/tinyxml2.h"
 #include <QCoreApplication>
-#include "XT_Logger/XT_Logger.h"
+//#include "XT_Logger/XT_Logger.h"
 #include "UtilityMethod/UtilityMethod.h"
-#include "DatabaseManager/DatabaseManager.h"
+//#include "DatabaseManager/DatabaseManager.h"
 
 PluginA::PluginA(QObject *parent) :
     QObject(parent)
@@ -26,8 +26,8 @@ void PluginA::initialize()
     //read();
     //tinyXml();
     //testUtilityMethod();
-    XT_Logger::getInstance()->setLogFile("./111222333.txt");
-    testDatabase();
+//    XT_Logger::getInstance()->setLogFile("./111222333.txt");
+//    testDatabase();
 }
 
 void PluginA::read()
@@ -52,7 +52,7 @@ void PluginA::read()
 
 void PluginA::tinyXml()
 {
-    XT_Logger::getInstance()->logWrite(XT::Warning,QString::fromLocal8Bit("开始解析Xml文件"));
+//    XT_Logger::getInstance()->logWrite(XT::Warning,QString::fromLocal8Bit("开始解析Xml文件"));
     QString strFileName = QCoreApplication::applicationDirPath() + "/../res/plugins.xml";
     tinyxml2::XMLDocument doc;
     tinyxml2::XMLError err = doc.LoadFile(strFileName.toStdString().c_str());
@@ -88,6 +88,6 @@ void PluginA::testDatabase()
 {
 //    QString strSql = QString::fromLocal8Bit("insert into T_USER_STUDENT values('777','王五',22);");
 //    DatabaseManager::getInstance()->add(strSql);
-    QString strSql = "select * from T_USER_STUDENT;";
-    QList<QMap<QString,QVariant>> res = DatabaseManager::getInstance()->query(strSql);
+//    QString strSql = "select * from T_USER_STUDENT;";
+//    QList<QMap<QString,QVariant>> res = DatabaseManager::getInstance()->query(strSql);
 }

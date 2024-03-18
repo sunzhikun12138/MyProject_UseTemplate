@@ -18,6 +18,6 @@ DISTFILES += \
 LIBS += \
     -L$$MY_LIBDIR \
     -lTinyXml2 \
-    -lXT_Logger \
+#    -lXT_Logger \
     -lUtilityMethod \
-    -lDatabaseManager
+#    -lDatabaseManager
